@@ -2,10 +2,6 @@ package main
 
 import "fmt"
 
-func main() {
-	menuIde()
-}
-
 //Berikut merupakan tampilan awal atau beranda pada fitur
 
 func menuIde() {
@@ -14,20 +10,20 @@ func menuIde() {
 	fmt.Println("===============================================================")
 	fmt.Println("                   BERANDA IDE DAN REFFERENSI")
 	fmt.Println("===============================================================")
-	fmt.Println("\n")
-	fmt.Println("\n")
-	fmt.Println("                    1. Lihat Ide Startup ")
-	fmt.Println("                          2. Keluar ")
-	fmt.Println("\n")
+	fmt.Print("                 Lihat ide yang telah ada di sini!")
+	fmt.Print("\n")
+	fmt.Println("                     [1. Lihat Ide Startup]")
+	fmt.Println("                          [2. Keluar] ")
+	fmt.Print("\n")
 	fmt.Print("Masukan Pilihan : ")
 	fmt.Scan(&tampilanIde)
 	switch tampilanIde {
 	case 1:
 		ideBrainUp1()
 	case 2:
-		keluar()
+		MenuBeranda()
 	default: //navigasi jika pilihan tidak sesuai
-		fmt.Println("Pilihan Tidak valid kocak,  pilih lagi noh!")
+		fmt.Println("Pilihan Tidak valid, mohon  pilih lagi")
 		menuIde()
 	}
 
@@ -69,7 +65,7 @@ func ideBrainUp1() { //NOTE: IDE CUMAN AMPE 6 DOANG BUAT CONTOH AJA, KALO LEBIH 
 	case 3:
 		menuIde()
 	default: //navigasi jika pilihan tidak sesuai
-		fmt.Println("Pilihan Tidak valid kocak,  pilih lagi noh!")
+		fmt.Println("Pilihan Tidak valid, mohon pilih lagi")
 		ideBrainUp1()
 	}
 }
@@ -108,11 +104,11 @@ func ideBrainUp2() {
 	case 2: //ini navigasi karena ide yang diberikan hanya 6 dan akan muncul tampilan ini
 		var adios string
 
-		fmt.Println("\n")
+		fmt.Print("\n")
 		fmt.Println("Yah... Maaf yah idenya baru itu aja")
-		fmt.Println("\n")
+		fmt.Print("\n")
 		fmt.Println("            (╥﹏╥)")
-		fmt.Println("\n")
+		fmt.Print("\n")
 		fmt.Println("    Support kami terus yah!!")
 		fmt.Println("")
 		fmt.Println("1. Kembali ke menu awal")
@@ -125,32 +121,9 @@ func ideBrainUp2() {
 	case 3:
 		menuIde()
 	default: //navigasi jika pilihan tidak sesuai
-		fmt.Println("Pilihan Tidak valid kocak,  pilih lagi noh!")
+		fmt.Println("Pilihan Tidak valid, mohon pilih lagi")
 		ideBrainUp2()
 	}
-}
-
-// nah pada bagian ini merupakan func yang digunakan untuk keluar dari fitur, tapi harusnya bakalan keluar ke menu utama pada main program
-
-func keluar() {
-	fmt.Println("yakin nih pengen keluar ?")
-	fmt.Println("1. Ya")
-	fmt.Println("2. gk jadi deh :)")
-
-	var yakin int
-	fmt.Print("Masukan Pilihan :")
-	fmt.Scan(&yakin)
-	switch yakin {
-	case 1:
-		fmt.Println("Yowes kalau mau keluar mah :(")
-		fmt.Println("Btw Thanks yah udh mau pake jasa kami ;)")
-	case 2:
-		menuIde()
-	default: //navigasi jika pilihan tidak sesuai
-		fmt.Println("Pilihan Tidak valid kocak,  pilih lagi noh!")
-		keluar()
-	}
-
 }
 
 func roadMap1() { // nah ini roadmap ide 1
@@ -487,7 +460,7 @@ func ide1() { // ini teh buat tampilan awal ide 1
 	fmt.Println("yuk kenalan sama foodfashion, FoodFashion merupakan startup dengan ide")
 	fmt.Println("yang keren lho! dimana ide startup ini dengan menggabungkan tampilan")
 	fmt.Println("makanan yang bikin ngiler sama fashion yang kece abis !!")
-	fmt.Println("\n")
+	fmt.Print("\n")
 
 }
 func ide2() { //ini teh buat tampilan awal ide 2
@@ -499,7 +472,7 @@ func ide2() { //ini teh buat tampilan awal ide 2
 	fmt.Println("yuk kenalan sama RoboCV, RoboCV merupakan startup yang dapat meng-")
 	fmt.Println("analisis CV kamu lho! dimana ide startup ini cara kerjanya ialah dengan")
 	fmt.Println("membaca apakah CV anda sudah dalam format yang benar!!")
-	fmt.Println("\n")
+	fmt.Print("\n")
 }
 
 func ide3() { // in teh buat tampilan awal ide 3
@@ -513,7 +486,7 @@ func ide3() { // in teh buat tampilan awal ide 3
 	fmt.Println("untuk belajar. dengan memblokir akses sosmed dan membuat kamu harus produktif")
 	fmt.Println("agar dapat membukanya, dengan adanya timer,to-do list, dan juga musik. yang")
 	fmt.Println("pastinya dapat membuat kamu terhindar dari distraksi dan menemanimu produktif.")
-	fmt.Println("\n")
+	fmt.Print("\n")
 }
 
 func ide4() { // ini buat tampilan awal ide 4
@@ -525,7 +498,7 @@ func ide4() { // ini buat tampilan awal ide 4
 	fmt.Println("yuk kenalan sama MedTrack, MedTrack merupakan platform digital yang")
 	fmt.Println("berbasis AI! yang dimana pengguna dapat memeriksa gejala penyakit")
 	fmt.Println("secara mandiri, dengan memberikan rekomendasi awal sebelum ke dokter.")
-	fmt.Println("\n")
+	fmt.Print("\n")
 }
 
 func ide5() { // nah initamwal ide 5
@@ -537,7 +510,7 @@ func ide5() { // nah initamwal ide 5
 	fmt.Println("yuk kenalan sama Platera, Platera merupakan marketplace makanan dan")
 	fmt.Println("dan minuman lokal, seperti UMKM kuliner maupun bahan makanan langsung")
 	fmt.Println("dari petani dan produsen lokal ke tangan konsumen atau pengguna.")
-	fmt.Println("\n")
+	fmt.Print("\n")
 }
 
 func ide6() { // nah ini tamwal ide 6
@@ -549,7 +522,7 @@ func ide6() { // nah ini tamwal ide 6
 	fmt.Println("yuk kenalan sama Creativy, Creativy adalah platform digital All-in-one")
 	fmt.Println("yang berperan sebagai pendukung kreator digital dalam menjual karya,")
 	fmt.Println("mengelola portofolio, yang langsung terhubung dengan klien potensial.")
-	fmt.Println("\n")
+	fmt.Print("\n")
 }
 
 func deskripsiIde1() { //nah ini deskripsi lanjutan buat ide 1
@@ -571,7 +544,7 @@ func deskripsiIde1() { //nah ini deskripsi lanjutan buat ide 1
 	fmt.Println("               boleh pilih bagian RoadMap yah...")
 	fmt.Println(" ")
 	fmt.Println("                          (˶ᵔ ᵕ ᵔ˶)")
-	fmt.Println("\n")
+	fmt.Print("\n")
 	roadMap1() // navigasi ini akan menuju pada roadmap sesuai ide yang diberikan
 }
 
@@ -595,7 +568,7 @@ func deskripsiIde2() { // nah ini deskripsi lanjutan buat ide 2
 	fmt.Println("               boleh pilih bagian RoadMap yah...")
 	fmt.Println(" ")
 	fmt.Println("                          (˶ᵔ ᵕ ᵔ˶)")
-	fmt.Println("\n")
+	fmt.Print("\n")
 	roadMap2() // navigasi ini akan menuju pada roadmap sesuai ide yang diberikan
 }
 
@@ -619,7 +592,7 @@ func deskripsiIde3() { // nah ini deskripsi lanjutan buat ide 3
 	fmt.Println("               boleh pilih bagian RoadMap yah...")
 	fmt.Println(" ")
 	fmt.Println("                          (˶ᵔ ᵕ ᵔ˶)")
-	fmt.Println("\n")
+	fmt.Print("\n")
 	roadMap3() // navigasi ini akan menuju pada roadmap sesuai ide yang diberikan
 }
 
@@ -646,7 +619,7 @@ func deskripsiIde4() {
 	fmt.Println("               boleh pilih bagian RoadMap yah...")
 	fmt.Println(" ")
 	fmt.Println("                          (˶ᵔ ᵕ ᵔ˶)")
-	fmt.Println("\n")
+	fmt.Print("\n")
 	roadMap4() // navigasi ini akan menuju pada roadmap sesuai ide yang diberikan
 }
 
@@ -671,7 +644,7 @@ func deskripsiIde5() {
 	fmt.Println("               boleh pilih bagian RoadMap yah...")
 	fmt.Println(" ")
 	fmt.Println("                          (˶ᵔ ᵕ ᵔ˶)")
-	fmt.Println("\n")
+	fmt.Print("\n")
 	roadMap5() // navigasi ini akan menuju pada roadmap sesuai ide yang diberikan
 }
 
@@ -696,6 +669,6 @@ func deskripsiIde6() {
 	fmt.Println("               boleh pilih bagian RoadMap yah...")
 	fmt.Println(" ")
 	fmt.Println("                          (˶ᵔ ᵕ ᵔ˶)")
-	fmt.Println("\n")
+	fmt.Print("\n")
 	roadMap6() // navigasi ini akan menuju pada roadmap sesuai ide yang diberikan
 }
